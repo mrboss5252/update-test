@@ -1,0 +1,80 @@
+{
+  "name": "test-0",
+  "version": "0.2.0",
+  "private": false,
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "electron-log": "^5.1.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "main": "./public/electron.js",
+  "homepage": "./",
+  "repository": "https://github.com/mrboss5252/update-test.git",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "electron": "electron .",
+    "dist": "electron-builder --win",
+    "eject": "react-scripts eject"
+  },
+  "publish": {
+    "provider": "github",
+    "repo": "update-test",
+    "owner": "mrboss5252",
+    "private": false
+  },
+  "build": {
+    "appId": "com.electron.updater",
+    "productName": "test-0",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build-assets"
+    },
+    "dmg": {
+      "title": "electron test"
+    },
+    "publish": {
+      "provider": "github"
+    },
+    "win": {
+      "target": "NSIS"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "electron": "^29.2.0",
+    "electron-builder": "^24.13.3",
+    "electron-updater": "^6.1.8"
+  }
+}
